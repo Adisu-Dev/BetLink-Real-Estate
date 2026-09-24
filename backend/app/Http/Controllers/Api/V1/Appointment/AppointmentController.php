@@ -48,8 +48,13 @@ class AppointmentController extends Controller
             return $this->error("You already have an active ({$existing->status}) viewing appointment for this property on {$date}. You can reschedule or cancel it from your appointments dashboard.", 422);
         }
 
-        $appointment = $this->appointmentService->book($property, $request->user(), $request->validated());
-        return $this->created($appointment, 'Appointment booked successfully');
+        try {
+            $appointment = $this->appointmentService->book($property, $request->user(), $request->validated());
+            return $this->created($appointment, 'Appointment booked successfully');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            $firstMessage = collect($e->errors())->flatten()->first();
+            return $this->error($firstMessage, 422);
+        }
     }
 
     public function show(Appointment $appointment): JsonResponse
