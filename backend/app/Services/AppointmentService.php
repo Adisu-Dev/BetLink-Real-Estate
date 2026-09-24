@@ -27,18 +27,26 @@ class AppointmentService
             $slotEnd = (clone $scheduledAt)->addMinutes($duration);
 
             // Step 3 & 4: Concurrency Lock & Collision Check
-            // Pessimistically lock conflicting appointment records for this property
-            $hasConflict = Appointment::where('property_id', $property->id)
+            // Pessimistically lock appointments in the target time window for this property
+            $windowStart = (clone $scheduledAt)->subMinutes(60);
+            $windowEnd = (clone $scheduledAt)->addMinutes($duration + 60);
+
+            $candidateAppointments = Appointment::where('property_id', $property->id)
                 ->whereIn('status', ['pending', 'confirmed'])
-                ->where(function ($query) use ($scheduledAt, $slotEnd) {
-                    $query->whereBetween('scheduled_at', [$scheduledAt, $slotEnd])
-                          ->orWhere(function ($q) use ($scheduledAt) {
-                              $q->where('scheduled_at', '<=', $scheduledAt)
-                                ->whereRaw('DATE_ADD(scheduled_at, INTERVAL duration_minutes MINUTE) > ?', [$scheduledAt]);
-                          });
-                })
+                ->whereBetween('scheduled_at', [$windowStart, $windowEnd])
                 ->lockForUpdate()
-                ->exists();
+                ->get();
+
+            $hasConflict = false;
+            foreach ($candidateAppointments as $candidate) {
+                $candStart = Carbon::parse($candidate->scheduled_at);
+                $candEnd = (clone $candStart)->addMinutes((int)($candidate->duration_minutes ?? 30));
+                // Overlap: new booking starts before existing ends, and new booking ends after existing starts
+                if ($scheduledAt < $candEnd && $slotEnd > $candStart) {
+                    $hasConflict = true;
+                    break;
+                }
+            }
 
             if ($hasConflict) {
                 throw ValidationException::withMessages([
