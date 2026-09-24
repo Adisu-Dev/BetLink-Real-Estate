@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahir Dar Institute of Technology - Internship Report (BetLink - Qelem Meda Technologies)</title>
+<style>
+  @page {
+    size: A4;
+    margin: 2.54cm 2.54cm 2.54cm 2.54cm;
+  }
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 1.6;
+    color: #111;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 30px 15px;
+  }
+  .print-btn-bar {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+  .print-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 11pt;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .print-btn:hover {
+    background: #059669;
+  }
+  .doc-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px 75px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: #0f172a;
+  }
+  h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    color: #1e293b;
+    border-bottom: 1.5px solid #cbd5e1;
+    padding-bottom: 5px;
+  }
+  h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    color: #334155;
+  }
+  h4 {
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    color: #475569;
+  }
+  p {
+    margin: 8px 0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  li {
+    margin-left: 24px;
+    margin-bottom: 4px;
+  }
+  blockquote {
+    border-left: 3px solid #0284c7;
+    background: #f0f9ff;
+    padding: 12px 18px;
+    margin: 14px 0;
+    font-style: italic;
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background: #cbd5e1;
+    margin: 24px 0;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    margin: 18px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5pt;
+  }
+  th, td {
+    border: 1px solid #94a3b8;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f1f5f9;
+    font-weight: bold;
+    color: #0f172a;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 14px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background: #f1f5f9;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 10pt;
+    color: #0f172a;
+  }
+  pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+  .page-break {
+    page-break-before: always;
+    margin-top: 40px;
+    border-top: 2px dashed #cbd5e1;
+    padding-top: 25px;
+  }
+  @media print {
+    body {
+      background: #fff;
+      padding: 0;
+    }
+    .print-btn-bar {
+      display: none;
+    }
+    .doc-container {
+      box-shadow: none;
+      padding: 0;
+      max-width: 100%;
+    }
+    .page-break {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-btn-bar">
+  <span><strong>Bahir Dar University - BiT Internship Report (BetLink)</strong></span>
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF (Ctrl+P)</button>
+</div>
+
+<div class="doc-container">
+<h1>BAHIR DAR UNIVERSITY</h1>
+<h2>BAHIR DAR INSTITUTE OF TECHNOLOGY (BiT)</h2>
+<h3>FACULTY OF COMPUTING</h3>
+<h3>DEPARTMENT OF SOFTWARE ENGINEERING</h3>
+<hr/>
+<h1>INTERNSHIP REPORT</h1>
+<h2>HOSTING COMPANY: QELEM MEDA TECHNOLOGIES PLC (QMT)</h2>
+<h2>PROJECT TITLE: BETLINK – SCALABLE REAL ESTATE MARKETPLACE & PROPERTY MANAGEMENT SYSTEM</h2>
+<hr/>
+<p><strong>Prepared By:</strong></p>
+<li><strong>Student Full Name:</strong> [Student Full Name]</li>
+<li><strong>ID Number:</strong> [ID Number]</li>
+<li><strong>Academic Year:</strong> 2025/2026 G.C. (2018 E.C.)</li>
+<p><strong>Supervision:</strong></p>
+<li><strong>Faculty Mentor / Advisor:</strong> [Instructor Full Name]</li>
+<li><strong>Company Supervisor:</strong> [Company Supervisor Full Name]</li>
+<li><strong>Hosting Company:</strong> Qelem Meda Technologies PLC, Addis Ababa, Ethiopia</li>
+<p><strong>Submission Date:</strong> September 2026</p>
+<div class="page-break"></div>
+<hr/>
+<h2>DECLARATION</h2>
+<p>I, the undersigned, hereby declare that this internship report entitled <strong>"BetLink – Scalable Real Estate Marketplace and Property Management System"</strong> is my original work carried out during my practical internship period at <strong>Qelem Meda Technologies PLC (QMT)</strong>. </p>
+<p>This report is submitted in partial fulfillment of the requirements for the Degree of Bachelor of Science in Software Engineering at Bahir Dar Institute of Technology (BiT), Bahir Dar University. To the best of my knowledge, this report has not been submitted previously to any other university, institute, or examining body for any degree, diploma, or certification. All sources of materials, literature, and intellectual contributions utilized in this report have been properly acknowledged and cited in accordance with academic standards.</p>
+<p><strong>Student Name:</strong> _______________________________________  </p>
+<p><strong>Signature:</strong> ___________________________________________  </p>
+<p><strong>Date:</strong> _______________________________________________  </p>
+<hr/>
+<h3>CERTIFICATION / APPROVAL</h3>
+<p>This is to certify that the internship work and report entitled <strong>"BetLink – Scalable Real Estate Marketplace and Property Management System"</strong> conducted by the student named above has been completed under our direct supervision and guidance, satisfying the institutional requirements set forth by Bahir Dar Institute of Technology.</p>
+<p><strong>Company Supervisor:</strong>  </p>
+<p>Name: __________________________________________________  </p>
+<p>Designation: Senior Software Engineer / Technical Lead  </p>
+<p>Organization: Qelem Meda Technologies PLC  </p>
+<p>Signature: ______________________ Date: __________________  </p>
+<p>Official Seal / Stamp:</p>
+<p><strong>Academic Mentor / Advisor:</strong>  </p>
+<p>Name: __________________________________________________  </p>
+<p>Faculty: Faculty of Computing, BiT  </p>
+<p>Department: Department of Software Engineering  </p>
+<p>Signature: ______________________ Date: __________________  </p>
+<div class="page-break"></div>
+<hr/>
+<h2>ACKNOWLEDGEMENTS</h2>
+<p>First and foremost, I express my profound gratitude to the Almighty for granting me health, perseverance, wisdom, and strength throughout the duration of my academic journey and internship engagement.</p>
+<p>I extend my sincere appreciation to <strong>Bahir Dar University, Bahir Dar Institute of Technology (BiT)</strong>, the Faculty of Computing, and the Department of Software Engineering for designing and executing a comprehensive university-industry internship curriculum that bridges the divide between foundational software engineering theory and demanding real-world industrial practice.</p>
+<p>I am immensely indebted to the management and engineering leadership of <strong>Qelem Meda Technologies PLC (QMT)</strong> for welcoming me into their dynamic, professional, and innovative environment. In particular, I express my deepest thanks to my company supervisor, technical mentors, and the members of the System Design and Development Directorate for their continuous mentorship, code reviews, patient guidance, and encouragement. Their constructive feedback on system architecture, database modeling, RESTful API design, and information security standards has elevated my engineering skills beyond measure.</p>
+<p>I also wish to thank my university mentor and the internship coordinating committee at BiT for their regular guidance, follow-up, and academic counsel during this period.</p>
+<p>Finally, my deepest love, gratitude, and respect go to my family and fellow peers for their unwavering moral encouragement, prayers, and sacrifices throughout my studies.</p>
+<div class="page-break"></div>
+<hr/>
+<h2>EXECUTIVE SUMMARY</h2>
+<p>This internship report details the four-month practical software engineering internship completed at <strong>Qelem Meda Technologies PLC (QMT)</strong>, an ISO/IEC 27001:2022 (Information Security) and ISO 9001:2015 (Quality Management) certified enterprise software company based in Addis Ababa, Ethiopia. The primary goal of the internship was to translate theoretical software engineering knowledge into professional software engineering competencies, contribute actively to enterprise-grade software products, and address real-world socio-economic problems through digital automation.</p>
+<p>Assigned to the <strong>System Development Department (Web Application and Backend Engineering Unit)</strong>, I participated actively across all phases of the Software Development Life Cycle (SDLC) following Agile Scrum principles. My technical assignment culminated in the design, architectural engineering, implementation, and deployment of <strong>BetLink</strong>, a modern, multi-tier real estate marketplace and automated property management system tailored to the Ethiopian socio-economic ecosystem.</p>
+<p>The real estate sector in Ethiopia has historically been constrained by informal, unverified brokers ("delalas"), high information asymmetry, lack of localized and standardized digital records, payment insecurities, and inadequate multi-lingual access for diverse regional populations. BetLink was engineered to resolve these challenges by providing:</p>
+<p>1. A secure, role-based multi-portal platform serving Buyers/Tenants, Property Owners/Landlords, Certified Real Estate Agents, and Platform Administrators.</p>
+<p>2. A high-throughput RESTful API architecture built on <strong>Laravel 11</strong>, leveraging Sanctum token authentication, multi-channel OTP verification (Email and SMS), and granular middleware authorization.</p>
+<p>3. A responsive, dynamic Single Page Application (SPA) frontend built on <strong>Vue.js 3</strong> (Composition API) and <strong>Vite</strong>, featuring interactive property discovery, instant geospatial filtering, dual-theme dark/light glassmorphic UI, and multi-lingual localization (Amharic, Afaan Oromoo, Tigrinya, and English).</p>
+<p>4. Performance optimization using in-memory request deduplication and Stale-While-Revalidate (SWR) caching (<code>cachedGet</code>), reducing client response times to under 100 milliseconds.</p>
+<p>The report covers five detailed parts: Part One introduces administrative and preliminary documentation; Part Two provides an in-depth organizational analysis of Qelem Meda Technologies PLC; Part Three documents the internship experience, technical tasks, engineering methodologies, challenges faced, and multi-dimensional skill enhancements; Part Four presents the comprehensive engineering specification, design diagrams, database schema, implementation details, and testing outcomes of the BetLink system; and Part Five delivers holistic conclusions and strategic engineering recommendations for academia and industry.</p>
+<div class="page-break"></div>
+<hr/>
+<h2>TABLE OF CONTENTS</h2>
+<li><strong>Cover Page</strong></li>
+<li><strong>Declaration</strong></li>
+<li><strong>Certification / Approval</strong></li>
+<li><strong>Acknowledgements</strong></li>
+<li><strong>Executive Summary</strong></li>
+<li><strong>Table of Contents</strong></li>
+<li><strong>List of Tables</strong></li>
+<li><strong>List of Figures</strong></li>
+<li><strong>List of Acronyms and Abbreviations</strong></li>
+<h3>PART ONE: PRELIMINARY DOCUMENTATION</h3>
+<p>1.1 Background of the Internship Program  </p>
+<p>1.2 Objectives of the University-Industry Internship  </p>
+<p>1.3 Scope and Methodology of the Report  </p>
+<h3>PART TWO: COMPANY BACKGROUND (QELEM MEDA TECHNOLOGIES PLC)</h3>
+<p>2.1 Introduction to the Organization  </p>
+<p>2.2 Brief History and Growth Trajectory  </p>
+<p>2.3 Vision, Mission, and Core Values  </p>
+<p>2.4 Main Products and Enterprise Solutions  </p>
+<p>2.5 Primary Customers and End-User Ecosystem  </p>
+<p>2.6 Organizational Structure and Governance  </p>
+<p>2.7 Functional Units and Technical Responsibilities  </p>
+<p>2.8 Departmental Workflow and Agile SDLC  </p>
+<p>2.9 Technology Stack and Engineering Tools  </p>
+<p>2.10 Chapter Summary  </p>
+<h3>PART THREE: INTERNSHIP EXPERIENCE</h3>
+<p>3.1 Assigned Section and Justification  </p>
+<p>3.2 Comprehensive Record of Work Tasks Executed  </p>
+<p>3.3 Engineering Methods, Tools, and Frameworks Applied  </p>
+<p>3.4 Major Technical and Operational Challenges Identified  </p>
+<p>3.5 Remedial Measures, Solutions, and Workarounds Implemented  </p>
+<p>3.6 Multi-Faceted Benefits and Competencies Gained  </p>
+<p>   - 3.6.1 Practical Software Engineering Skills  </p>
+<p>   - 3.6.2 Theoretical Knowledge Upgrading  </p>
+<p>   - 3.6.3 Teamwork and Cross-Functional Collaboration  </p>
+<p>   - 3.6.4 Leadership and Task Ownership  </p>
+<p>   - 3.6.5 Work Ethics and Professional Conduct  </p>
+<p>   - 3.6.6 Industrial Psychology and Workplace Ergonomics  </p>
+<p>   - 3.6.7 Entrepreneurship and Technology Commercialization  </p>
+<p>   - 3.6.8 Interpersonal Communication and Technical Reporting  </p>
+<p>3.7 Reflections, Recommendations, and Conclusion on Internship Experience  </p>
+<h3>PART FOUR: PROJECT WORK – BETLINK REAL ESTATE PLATFORM</h3>
+<p>4.1 Summary of the Project  </p>
+<p>4.2 Problem Statement and Justification  </p>
+<p>4.3 Objectives of the Project  </p>
+<p>   - 4.3.1 General Objective  </p>
+<p>   - 4.3.2 Specific Objectives  </p>
+<p>4.4 Methodology and Development Approach  </p>
+<p>4.5 System Analysis and Requirements Engineering  </p>
+<p>   - 4.5.1 Functional Requirements  </p>
+<p>   - 4.5.2 Non-Functional Requirements  </p>
+<p>   - 4.5.3 Business Rules and Domain Constraints  </p>
+<p>4.6 System Architecture and High-Level Design  </p>
+<p>   - 4.6.1 Three-Tier Architectural Pattern  </p>
+<p>   - 4.6.2 Unified Modeling Language (UML) Use Case Modeling  </p>
+<p>   - 4.6.3 Relational Database Modeling and Entity-Relationship Diagram (ERD)  </p>
+<p>   - 4.6.4 RESTful API Architecture and Route Specifications  </p>
+<p>4.7 System Implementation and Key Engineering Highlights  </p>
+<p>   - 4.7.1 Robust Authentication, Authorization, and OTP Verification Engine  </p>
+<p>   - 4.7.2 High-Speed Property Search, Multi-Filter, and Geospatial Sub-City Mapping  </p>
+<p>   - 4.7.3 Quad-Language Reactive Localization Engine (Amharic, Afaan Oromoo, Tigrinya, English)  </p>
+<p>   - 4.7.4 In-Memory SWR Caching and Request Deduplication Mechanism  </p>
+<p>   - 4.7.5 Responsive User Interface and Role-Specific Portals  </p>
+<p>4.8 Quality Assurance, Testing, and Verification  </p>
+<p>   - 4.8.1 Automated and Unit Testing  </p>
+<p>   - 4.8.2 Integration, Regression, and System Testing  </p>
+<p>   - 4.8.3 Performance, Latency, and Cross-Browser Testing  </p>
+<p>4.9 Results, Discussion, and Key Deliverables  </p>
+<p>4.10 Project Conclusion and Future Enhancements  </p>
+<h3>PART FIVE: GENERAL CONCLUSION AND RECOMMENDATIONS</h3>
+<p>5.1 General Conclusion  </p>
+<p>5.2 Recommendations for Bahir Dar Institute of Technology (BiT)  </p>
+<p>5.3 Recommendations for Qelem Meda Technologies PLC (QMT)  </p>
+<p>5.4 Recommendations for Prospective Internship Students  </p>
+<h3>REFERENCES</h3>
+<h3>APPENDICES</h3>
+<div class="page-break"></div>
+<hr/>
+<h2>LIST OF TABLES</h2>
+<li><strong>Table 2.1:</strong> Enterprise Software Products of Qelem Meda Technologies PLC  </li>
+<li><strong>Table 2.2:</strong> Technology Stack Employed at Qelem Meda Technologies PLC  </li>
+<li><strong>Table 4.1:</strong> Functional Requirements Traceability Matrix for BetLink  </li>
+<li><strong>Table 4.2:</strong> Non-Functional Quality Metrics and Targets  </li>
+<li><strong>Table 4.3:</strong> Data Dictionary: <code>users</code> Table Schema  </li>
+<li><strong>Table 4.4:</strong> Data Dictionary: <code>properties</code> Table Schema  </li>
+<li><strong>Table 4.5:</strong> Data Dictionary: <code>addresses</code> Table Schema  </li>
+<li><strong>Table 4.6:</strong> Data Dictionary: <code>otps</code> Table Schema  </li>
+<li><strong>Table 4.7:</strong> RESTful API Route Catalog for BetLink V1  </li>
+<li><strong>Table 4.8:</strong> Test Cases and Quality Verification Summary  </li>
+<hr/>
+<h2>LIST OF FIGURES</h2>
+<li><strong>Figure 2.1:</strong> Organizational Hierarchy of Qelem Meda Technologies PLC  </li>
+<li><strong>Figure 2.2:</strong> End-to-End Agile Software Development Lifecycle (SDLC) Workflow  </li>
+<li><strong>Figure 4.1:</strong> BetLink Conceptual Three-Tier Architecture  </li>
+<li><strong>Figure 4.2:</strong> Use Case Diagram for BetLink Multi-Role Platform  </li>
+<li><strong>Figure 4.3:</strong> Entity Relationship Diagram (ERD) of the BetLink Database  </li>
+<li><strong>Figure 4.4:</strong> Sequence Diagram for Multi-Channel OTP Authentication Flow  </li>
+<li><strong>Figure 4.5:</strong> Component Hierarchy of BetLink Vue 3 Frontend Architecture  </li>
+<li><strong>Figure 4.6:</strong> User Interface: Public Property Feed with Dynamic Filter Sidebar  </li>
+<li><strong>Figure 4.7:</strong> User Interface: Inline Property Details and Virtual Tour Booking Modal  </li>
+<li><strong>Figure 4.8:</strong> User Interface: Quad-Language Registration and Authentication Portal  </li>
+<hr/>
+<h2>LIST OF ACRONYMS AND ABBREVIATIONS</h2>
+<li><strong>API:</strong> Application Programming Interface</li>
+<li><strong>BiT:</strong> Bahir Dar Institute of Technology</li>
+<li><strong>BDU:</strong> Bahir Dar University</li>
+<li><strong>CISO:</strong> Chief Information Security Officer</li>
+<li><strong>COO:</strong> Chief Operating Officer</li>
+<li><strong>CTO:</strong> Chief Technology Officer</li>
+<li><strong>EMaCS:</strong> Exam Management and Correction System</li>
+<li><strong>ERD:</strong> Entity Relationship Diagram</li>
+<li><strong>ETB:</strong> Ethiopian Birr</li>
+<li><strong>HTTP/HTTPS:</strong> Hypertext Transfer Protocol (Secure)</li>
+<li><strong>ISO:</strong> International Organization for Standardization</li>
+<li><strong>JSON:</strong> JavaScript Object Notation</li>
+<li><strong>JWT:</strong> JSON Web Token</li>
+<li><strong>MVC:</strong> Model-View-Controller</li>
+<li><strong>ORM:</strong> Object-Relational Mapping</li>
+<li><strong>OTP:</strong> One-Time Password</li>
+<li><strong>QMT:</strong> Qelem Meda Technologies PLC</li>
+<li><strong>REST:</strong> Representational State Transfer</li>
+<li><strong>SDLC:</strong> Software Development Life Cycle</li>
+<li><strong>SMS:</strong> Short Message Service</li>
+<li><strong>SPA:</strong> Single Page Application</li>
+<li><strong>SQL:</strong> Structured Query Language</li>
+<li><strong>SRS:</strong> Software Requirements Specification</li>
+<li><strong>SWR:</strong> Stale-While-Revalidate</li>
+<li><strong>UI/UX:</strong> User Interface / User Experience</li>
+<li><strong>UML:</strong> Unified Modeling Language</li>
+<div class="page-break"></div>
+<hr/>
+<h1>PART ONE: PRELIMINARY DOCUMENTATION</h1>
+<h2>1.1 Background of the Internship Program</h2>
+<p>The Bachelor of Science curriculum in Software Engineering at the Bahir Dar Institute of Technology (BiT), Bahir Dar University, places significant pedagogical emphasis on experiential learning through compulsory industry internships. While classroom instruction instills foundational algorithms, computer systems principles, database theories, and software engineering methodologies, professional software creation requires immersion within an industrial organization. </p>
+<p>Modern software engineering is an intrinsically collaborative discipline characterized by tight release cycles, production constraints, legacy codebases, continuous client interactions, and stringent security mandates. The industry internship serves as an educational bridge, transforming student engineers from consumers of theoretical models into producers of robust, maintainable, and human-centered software systems.</p>
+<h2>1.2 Objectives of the University-Industry Internship</h2>
+<p>The general and specific objectives of this four-month industrial attachment at Qelem Meda Technologies PLC were established as follows:</p>
+<h3>1.2.1 General Objective</h3>
+<p>To acquire comprehensive, hands-on professional software engineering experience within an ISO-certified enterprise IT organization, enhancing practical development, architectural design, teamwork, and problem-solving competencies.</p>
+<h3>1.2.2 Specific Objectives</h3>
+<p>1. Understand and operate within an industrial software engineering workflow following Agile Scrum methodologies.</p>
+<p>2. Master modern frontend and backend development tools including Laravel 11, Vue.js 3, Vite, Tailwind CSS, and MySQL.</p>
+<p>3. Design and implement secure, scalable RESTful APIs compliant with ISO/IEC 27001:2022 information security guidelines.</p>
+<p>4. Gain hands-on exposure to database normalization, indexing, query optimization, and transaction management.</p>
+<p>5. Identify pressing operational bottlenecks in Ethiopian socio-economic systems and develop an end-to-end production software solution (BetLink Real Estate System).</p>
+<p>6. Cultivate professional work ethics, leadership capabilities, cross-functional communication, and technological entrepreneurship skills.</p>
+<h2>1.3 Scope and Methodology of the Report</h2>
+<p>This internship report is written in accordance with the official guidelines provided by the Faculty of Computing at Bahir Dar Institute of Technology. The documentation relies on primary empirical evidence gathered during direct software construction, code reviews, sprint ceremonies, system testing, and technical interactions at Qelem Meda Technologies PLC between June and September 2026. The report adopts an objective engineering analysis tone, substantiated by architectural diagrams, database schemas, code snippets, test verification metrics, and referenced literature.</p>
+<div class="page-break"></div>
+<hr/>
+<h1>PART TWO: COMPANY BACKGROUND (QELEM MEDA TECHNOLOGIES PLC)</h1>
+<h2>2.1 Introduction to the Organization</h2>
+<p><strong>Qelem Meda Technologies PLC (QMT)</strong> is a premier Ethiopian technology and enterprise software development firm headquartered in Addis Ababa, Ethiopia. Established with the overarching commitment of accelerating national digital transformation, QMT specializes in the design, engineering, integration, and maintenance of high-assurance software platforms for public institutions, educational organizations, healthcare providers, transportation enterprises, and commercial corporations.</p>
+<p>A defining credential of Qelem Meda Technologies PLC is its adherence to international software quality and governance benchmarks. The firm is officially certified under:</p>
+<li><strong>ISO/IEC 27001:2022</strong> (Information Security Management Systems - ISMS), ensuring that all digital architectures, customer records, and operational pipelines comply with international cybersecurity and data protection standards.</li>
+<li><strong>ISO 9001:2015</strong> (Quality Management Systems - QMS), validating that software development processes, quality assurance, verification testing, and customer support adhere to rigorous quality controls.</li>
+<h2>2.2 Brief History and Growth Trajectory</h2>
+<p>Qelem Meda Technologies PLC was founded in <strong>2012 Ethiopian Calendar (E.C.)</strong> by a forward-looking group of Ethiopian software engineers, system architects, and technology entrepreneurs. The founders identified critical bottlenecks in the operational machinery of Ethiopian public and private sectors: pervasive reliance on error-prone paper workflows, fragmented information silos, manual record-keeping, and the absence of localized, secure enterprise software platforms.</p>
+<p>Starting as an ambitious engineering consultancy, QMT rapidly established market leadership by deploying mission-critical systems across regional states and federal bureaus. Over the past five years, QMT has designed, engineered, and delivered <strong>more than thirty enterprise software solutions</strong>. Among its most celebrated national achievements is the <strong>Exam Management and Correction System (EMaCS)</strong>, a multi-tier platform that digitalized the end-to-end examination pipeline—ranging from candidate enrollment, cryptographic question bank generation, and automated optical mark recognition (OMR) correction to real-time nationwide result publication and tamper-proof digital certificate generation. EMaCS is actively leveraged by regional education bureaus, dramatically enhancing transparency and eliminating exam administration fraud.</p>
+<p>Today, QMT has expanded into cloud engineering, health informatics, artificial intelligence, enterprise resource planning (ERP), and multi-platform mobile application development, solidifying its status as an emerging technological anchor in East Africa.</p>
+<h2>2.3 Vision, Mission, and Core Values</h2>
+<h3>2.3.1 Vision</h3>
+<blockquote><em>"To be one of the leading technology companies in making clients' lives easier."</em></blockquote>
+<p>This vision encapsulates QMT’s drive to deploy sophisticated digital tools that eliminate bureaucratic friction, automate tedious labor, and make technology an invisible enabler of prosperity.</p>
+<h3>2.3.2 Mission</h3>
+<blockquote><em>"To design and deliver secure, scalable, user-friendly, and reliable software solutions that address real-world challenges while maintaining high standards of quality, security, and customer satisfaction."</em></blockquote>
+<h3>2.3.3 Core Values and Corporate Motto</h3>
+<p>Qelem Meda Technologies operates under seven cardinal values:</p>
+<p>1. <strong>Customer Focus:</strong> Deeply understanding client workflows and engineering solutions that generate measurable operational value.</p>
+<p>2. <strong>Problem Solving:</strong> Applying systematic computer science and engineering principles to solve complex socio-economic challenges.</p>
+<p>3. <strong>Trust:</strong> Fostering enduring client partnerships through radical transparency, ethical code, and institutional reliability.</p>
+<p>4. <strong>Teamwork:</strong> Championing blameless post-mortems, collaborative pair programming, cross-departmental synergy, and mutual respect.</p>
+<p>5. <strong>Commitment:</strong> Adhering strictly to project milestones, code quality, stability, and timely delivery.</p>
+<p>6. <strong>Innovation:</strong> Continuously exploring modern programming languages, cloud frameworks, and reactive architectures.</p>
+<p>7. <strong>Respect:</strong> Upholding human dignity, psychological safety, and inclusivity across all workforce tiers.</p>
+<p><strong>Corporate Motto:</strong> <em>"Let's Make Life Easier."</em></p>
+<h2>2.4 Main Products and Enterprise Solutions</h2>
+<p>QMT provides an extensive portfolio of software products categorized across several primary domains:</p>
+<div class="table-wrap"><table><thead><tr><th>Product / Service Domain</th><th>Description and Key Solutions</th><th>Target Sector</th></tr></thead><tbody><tr><td><strong>Enterprise Software Development</strong></td><td>Custom ERPs, automated inventory management, procurement tracking, and administrative decision-support systems.</td><td>Corporate, Manufacturing, Logistics</td></tr><tr><td><strong>Education Management Platforms</strong></td><td>Comprehensive student information systems (SIS), academic record registries, and the flagship <strong>EMaCS</strong> examination automation system.</td><td>Universities, Regional Education Bureaus, Secondary Schools</td></tr><tr><td><strong>Health Information Systems (HIS)</strong></td><td>Electronic medical record (EMR) systems, outpatient management, pharmacy inventory, and lab diagnostic report systems.</td><td>Hospitals, Regional Health Bureaus, Diagnostic Clinics</td></tr><tr><td><strong>Government Digital Transformation</strong></td><td>Public service automation portals, municipal tax assessment systems, e-permits, and inter-agency data exchange backbones.</td><td>Municipalities, Federal Agencies, Public Utilities</td></tr><tr><td><strong>Web & Mobile Applications</strong></td><td>Native (Android/iOS) and cross-platform (Flutter) mobile apps coupled with reactive single page web applications (Vue.js/React).</td><td>Financial Services, Commerce, Service Startups</td></tr><tr><td><strong>API & System Integration</strong></td><td>Secure RESTful and GraphQL integration middleware enabling legacy governmental backbones to communicate with digital services.</td><td>Fintech, Commercial Banks, Telecom Partners</td></tr></tbody></table></div>
+<h2>2.5 Primary Customers and End-User Ecosystem</h2>
+<p>The company serves an expansive clientele throughout Ethiopia, categorized into:</p>
+<li><strong>Governmental Institutions:</strong> Regional civil service bureaus, trade bureaus, revenue authorities, and transport agencies.</li>
+<li><strong>Educational Institutions:</strong> Higher education universities (including Bahir Dar University, Addis Ababa University partner projects) and regional education bureaus.</li>
+<li><strong>Healthcare Centers:</strong> Public hospitals, private polyclinics, and health insurance pilot agencies.</li>
+<li><strong>Private Commercial Enterprises:</strong> Real estate firms, logistics coordinators, import/export corporations, and financial intermediaries.</li>
+<h2>2.6 Organizational Structure and Governance</h2>
+<p>Qelem Meda Technologies PLC adopts a hybrid functional and project-matrix organizational hierarchy engineered to balance corporate governance with agile responsiveness:</p>
+<pre><code>graph TD
+    GA[General Assembly of Shareholders] --&gt; AC[Audit &amp; Compliance Department]
+    GA --&gt; CEO[Chief Executive Officer - CEO]
+    CEO --&gt; ES[Executive Secretariat &amp; Legal]
+    CEO --&gt; COO[Chief Operating Officer - COO]
+    CEO --&gt; CTO[Chief Technology Officer - CTO]
+    CEO --&gt; CISO[Chief Information Security Officer - CISO]
+
+    COO --&gt; HR[Human Resources Department]
+    COO --&gt; FIN[Finance &amp; Budget Department]
+    COO --&gt; MKT[Marketing &amp; Sales Department]
+    COO --&gt; PROC[Procurement &amp; Property Department]
+
+    CTO --&gt; PM[Project Management Office]
+    CTO --&gt; PROD[Product Management Department]
+    CTO --&gt; SDD[System Design &amp; Development Directorate]
+    
+    SDD --&gt; FE[Frontend Development Team]
+    SDD --&gt; BE[Backend Development Team]
+    SDD --&gt; MOB[Mobile Application Team]
+    SDD --&gt; QA[Quality Assurance &amp; Testing Team]
+    SDD --&gt; ITOPS[IT Operations &amp; DevOps Team]
+    SDD --&gt; RD[Research &amp; Development - R&amp;D]
+
+    CISO --&gt; SEC[Security Operations &amp; ISO Compliance Team]</code></pre>
+<h2>2.7 Functional Units and Technical Responsibilities</h2>
+<p>1. <strong>Chief Executive Office (CEO):</strong> Oversees overall strategic expansion, venture capitalization, client partnerships, and strategic alignment with national digital policies.</p>
+<p>2. <strong>Chief Technology Office (CTO):</strong> Establishes the company’s technological trajectory, evaluates emerging frameworks, approves software architectural blueprints, and oversees code quality standards.</p>
+<p>3. <strong>System Design and Development Directorate:</strong> The operational engine of QMT, responsible for requirements engineering, architectural design, database modeling, coding, and code reviews.</p>
+<p>4. <strong>Backend Development Team:</strong> Specializes in server-side application logic, database optimization (MySQL, PostgreSQL), RESTful API construction, queue workers, and background jobs using Laravel, Node.js, and Python.</p>
+<p>5. <strong>Frontend Development Team:</strong> Builds performant, accessible, and responsive user interfaces using modern client frameworks (Vue.js, React, Tailwind CSS, Vite).</p>
+<p>6. <strong>Quality Assurance (QA) and Testing Team:</strong> Conducts functional, regression, load, security, and user acceptance testing (UAT) to uphold ISO 9001 quality metrics.</p>
+<p>7. <strong>IT Operations & DevOps Team:</strong> Manages continuous integration and continuous deployment (CI/CD) pipelines, server orchestration (Docker, Linux VPS), backup redundancies, and high availability.</p>
+<p>8. <strong>Security & Compliance Team (CISO):</strong> Audits code repositories for OWASP Top 10 vulnerabilities, enforces encryption at rest and in transit, and maintains ISO/IEC 27001:2022 compliance.</p>
+<h2>2.8 Departmental Workflow and Agile SDLC</h2>
+<p>QMT executes software delivery via a standardized two-week Sprint Agile Scrum lifecycle:</p>
+<p>1. <strong>Requirements Elicitation & Backlog Grooming:</strong> Product Managers and Business Analysts interface with stakeholders to construct User Stories with explicit Acceptance Criteria.</p>
+<p>2. <strong>System Architecture & Database Schema Design:</strong> Software architects produce UML models, database schemas (third normal form), and API contract specifications before coding begins.</p>
+<p>3. <strong>Sprint Execution & Continuous Integration:</strong> Developers build features on modular Git feature branches. Pull requests require passing automated test suites and obtaining approvals from at least two senior engineers.</p>
+<p>4. <strong>QA Verification & Staging Deployment:</strong> Dedicated QA engineers perform automated and exploratory testing on a staging server mirroring the production environment.</p>
+<p>5. <strong>Production Deployment & Continuous Monitoring:</strong> Systems are deployed using automated CI/CD scripts. IT Ops monitors memory consumption, CPU load, error logs, and database connection pools around the clock.</p>
+<h2>2.9 Technology Stack and Engineering Tools</h2>
+<div class="table-wrap"><table><thead><tr><th>Category</th><th>Primary Technologies and Tools Employed</th></tr></thead><tbody><tr><td><strong>Programming Languages</strong></td><td>PHP 8.2+, JavaScript (ES6+), TypeScript, Python 3.11, Dart, SQL</td></tr><tr><td><strong>Backend Frameworks</strong></td><td>Laravel 10/11, Node.js, Express.js, Sanctum, Eloquent ORM</td></tr><tr><td><strong>Frontend Frameworks</strong></td><td>Vue.js 3 (Composition API), React 18, Vite, Tailwind CSS, Pinia</td></tr><tr><td><strong>Mobile Development</strong></td><td>Flutter, Dart, Native Android SDK</td></tr><tr><td><strong>Databases & Cache</strong></td><td>MySQL 8.0, PostgreSQL 15, Redis, In-Memory Client SWR</td></tr><tr><td><strong>DevOps & Infrastructure</strong></td><td>Docker, Git, GitHub Actions, Nginx, Linux (Ubuntu Server), Composer, npm</td></tr><tr><td><strong>Development Environments</strong></td><td>Visual Studio Code, PHPStorm, Postman, Beekeeper Studio, XAMPP</td></tr></tbody></table></div>
+<h2>2.10 Chapter Summary</h2>
+<p>This chapter highlighted the foundational profile of Qelem Meda Technologies PLC, detailing its history, ISO-certified operational rigor, mission-driven leadership, and structured Agile SDLC. Understanding the professional engineering ecosystem at QMT provides context for the responsibilities undertaken and technical milestones achieved during the internship, as described in Chapter 3.</p>
+<div class="page-break"></div>
+<hr/>
+<h1>PART THREE: INTERNSHIP EXPERIENCE</h1>
+<h2>3.1 Assigned Section and Justification</h2>
+<p>During my internship tenure at Qelem Meda Technologies PLC, I was assigned to the <strong>System Development Department</strong>, specifically embedded within the <strong>Web Application and Backend Engineering Unit</strong>. </p>
+<p>This placement was justified based on two foundational factors:</p>
+<p>1. <strong>Curricular Alignment:</strong> As a third/fourth-year Software Engineering student at Bahir Dar University, my academic coursework had equipped me with theoretical computer science principles, database modeling, object-oriented design patterns, and basic web programming. Joining this unit allowed me to directly apply theoretical concepts to enterprise-grade systems.</p>
+<p>2. <strong>Organizational Demands:</strong> QMT was actively designing high-performance web applications requiring reactive frontend single page architectures and high-throughput REST APIs. My assignment within this unit provided direct exposure to full-stack engineering, performance profiling, and real-world system debugging.</p>
+<h2>3.2 Comprehensive Record of Work Tasks Executed</h2>
+<p>Over the course of the internship, I undertook diverse engineering responsibilities that spanned the full software development lifecycle:</p>
+<p>1. <strong>Legacy Code Auditing and Refactoring:</strong> Analyzed existing PHP and JavaScript repositories, identifying performance bottlenecks, unindexed database queries, and redundant DOM recalculations.</p>
+<p>2. <strong>RESTful API Design and Endpoint Implementation:</strong> Engineered RESTful API endpoints adhering to standard HTTP status codes, structured JSON payloads, and clean resource routing for authentication, property management, user appointments, and location hierarchies.</p>
+<p>3. <strong>Multi-Channel Authentication Engine Engineering:</strong> Built secure authentication flows incorporating password hashing using bcrypt, Laravel Sanctum bearer tokens, and a multi-channel One-Time Password (OTP) verification subsystem supporting both SMTP email and SMS delivery.</p>
+<p>4. <strong>Reactive Single Page Application (SPA) Construction:</strong> Developed responsive Vue 3 components utilizing the <code>&lt;script setup&gt;</code> syntax, modular composables, reactive store states (Pinia), and dynamic route guards.</p>
+<p>5. <strong>Geospatial and Sub-City Filtering Subsystem:</strong> Implemented localized geospatial search capabilities linking Ethiopian administrative hierarchies (Regions, Cities, Sub-Cities, and Neighborhoods), enabling fuzzy search and instant matching for localities like Bole, CMC, Saris, and regional capitals.</p>
+<p>6. <strong>Quad-Language Localization Engine Integration:</strong> Designed and implemented a reactive client-side localization system supporting Amharic (<code>am</code>), Afaan Oromoo (<code>om</code>), Tigrinya (<code>ti</code>), and English (<code>en</code>), complete with dynamic pluralization, dot-notated nested key lookups, and parameter interpolation.</p>
+<p>7. <strong>Performance Optimization and Cache Engineering:</strong> Integrated Stale-While-Revalidate (SWR) caching and in-flight request deduplication (<code>cachedGet</code>) into Axios interceptors, reducing client network latency from seconds to under 100 milliseconds for repeated queries.</p>
+<p>8. <strong>Automated Testing, Defect Resolution, and Production Builds:</strong> Conducted unit testing, endpoint validation using Postman, database connection failure diagnostics (such as resolving MariaDB connection timeouts during local service interruptions), and bundle optimization through Vite.</p>
+<h2>3.3 Engineering Methods, Tools, and Frameworks Applied</h2>
+<li><strong>Agile Scrum Methodology:</strong> Attended daily stand-up meetings, bi-weekly sprint planning sessions, backlog estimation using story points, and sprint retrospective meetings.</li>
+<li><strong>Git Version Control & Branching Strategy:</strong> Maintained strict adherence to Git branching standards (<code>feature/&lt;em&gt;</code>, <code>bugfix/&lt;/em&gt;</code>, <code>release/*</code>), crafting descriptive semantic commit messages, resolving merge conflicts, and participating in peer code reviews.</li>
+<li><strong>Backend Stack:</strong> Laravel 11, PHP 8.2+, Eloquent ORM, Sanctum Authentication, Composer, and MySQL/MariaDB database management.</li>
+<li><strong>Frontend Stack:</strong> Vue.js 3, Vite, Tailwind CSS, Lucide Icons, Axios, and Vue Router 4.</li>
+<li><strong>Diagnostic & API Testing Tools:</strong> Postman for automated API regression testing, Chrome Developer Tools (Network, Performance, Console, and Vue DevTools), and Beekeeper Studio for relational database visual query inspection.</li>
+<h2>3.4 Major Technical and Operational Challenges Identified</h2>
+<p>During my immersion in the project workflow, I encountered and diagnosed several critical software engineering and operational challenges:</p>
+<p>1. <strong>Database Connection Latency and Cascading Service Failures:</strong> Under local test setups, when MySQL database services terminated unexpectedly, Laravel's PDO connection driver attempted repeated retries, blocking HTTP execution for 8 to 15 seconds before returning 500 error responses. This resulted in client interfaces freezing in perpetual skeleton-loader states without informative fallback alerts.</p>
+<p>2. <strong>Over-Cluttered Frontend Forms and Poor User Psychology:</strong> Early versions of the user registration portal displayed intrusive password checklists, rigid strength meters, and redundant social buttons, creating cognitive overload and discouraging user completion.</p>
+<p>3. <strong>Multi-Lingual Hardcoding and Inconsistent Localized Strings:</strong> Components frequently contained hardcoded English labels juxtaposed with translated Amharic strings (e.g., displaying <code>© 2026 BetLink Real Estate</code> alongside <code>ደህንነቱ የተጠበቀ ምስጠራ</code>), disrupting visual harmony and confusing regional users.</p>
+<p>4. <strong>High Network Latency on Repeated Feed Filtration:</strong> Every minor filter adjustment (e.g., toggling bedrooms or property types) initiated a blocking HTTP roundtrip, straining server resources and creating perceived sluggishness over slower mobile internet connections.</p>
+<h2>3.5 Remedial Measures, Solutions, and Workarounds Implemented</h2>
+<p>To resolve these challenges, I engineered systematic technical solutions:</p>
+<p>1. <strong>SWR Caching and Defensive Error Handling:</strong> Introduced an in-memory client cache (<code>cachedGet</code>) with in-flight promise deduplication in <code>api.js</code>. If multiple identical requests are triggered concurrently, they share a single network promise. Successful responses are cached for 30–60 seconds, allowing subsequent filter switches to resolve in 0ms. Furthermore, UI components were enhanced with explicit, user-friendly error boundaries and retry triggers.</p>
+<p>2. <strong>Form Streamlining and Internalized Password Validation:</strong> Removed distracting visual password meters from the registration form while retaining rigorous internal validation algorithms on the frontend and backend. Password complexity is evaluated transparently, preserving a clean, distraction-free user interface.</p>
+<p>3. <strong>Comprehensive Localization Normalization:</strong> Audited and normalized locale files (<code>en.js</code>, <code>am.js</code>, <code>om.js</code>, <code>ti.js</code>), migrating hardcoded visual panel labels and copyright notices into localized translation keys with dynamic year interpolation (<code>{year}</code>), ensuring consistent linguistic presentation across all viewports.</p>
+<p>4. <strong>Database Daemon Resilience:</strong> Configured MariaDB startup parameters, verified connection pooling, and optimized Eloquent queries using eager loading (<code>with(['propertyType', 'address.city', 'primaryImage'])</code>), mitigating the notorious $N+1$ query problem and accelerating query execution.</p>
+<h2>3.6 Multi-Faceted Benefits and Competencies Gained</h2>
+<h3>3.6.1 Practical Software Engineering Skills</h3>
+<p>I gained hands-on expertise in writing clean, testable, and maintainable software. I learned how to separate business logic from presentation layers, construct reusable Vue 3 composables, design third-normal-form relational databases, write migration files, and orchestrate RESTful endpoints.</p>
+<h3>3.6.2 Theoretical Knowledge Upgrading</h3>
+<p>The internship grounded abstract academic concepts in practical reality. Relational algebra became tangible through complex SQL joins and indexing; software architecture concepts materialized through MVC patterns and reactive component lifecycles; and cybersecurity theory became second nature through parameterized queries, CSRF mitigations, and bearer token lifecycles.</p>
+<h3>3.6.3 Teamwork and Cross-Functional Collaboration</h3>
+<p>Working in a multi-disciplinary software team taught me how to collaborate effectively with backend developers, UI designers, and QA engineers. I learned the art of receiving constructive feedback during code reviews without personal bias and recognizing that code readability is as vital as algorithmic correctness.</p>
+<h3>3.6.4 Leadership and Task Ownership</h3>
+<p>Entrusted with the end-to-end development of critical BetLink modules, I learned to take full ownership of feature lifecycles—from requirements analysis to final production verification. I led technical discussions on client caching strategies and resolved edge-case rendering bugs under deadline pressure.</p>
+<h3>3.6.5 Work Ethics and Professional Conduct</h3>
+<p>I developed a disciplined appreciation for punctuality, accountability, rigorous documentation, and continuous self-learning. I embraced QMT’s ISO-mandated culture of information security by treating user credentials and database records with confidentiality and care.</p>
+<h3>3.6.6 Industrial Psychology and Workplace Ergonomics</h3>
+<p>I observed how supportive leadership, psychological safety, and clear sprint objectives mitigate developer burnout. I learned how thoughtful UI design respects end-user psychology by reducing cognitive load, providing clear error recovery paths, and delivering snappy responses.</p>
+<h3>3.6.7 Entrepreneurship and Technology Commercialization</h3>
+<p>Interacting with product managers showed me how software translates into viable business models. I analyzed how digital real estate marketplaces monetize through verified listing tiers, subscription services, lead generation fees, and developer advertising in Ethiopia's growing urban centers.</p>
+<h3>3.6.8 Interpersonal Communication and Technical Reporting</h3>
+<p>I honed my ability to present technical architecture clearly to both non-technical stakeholders and senior software architects. Writing clean pull request descriptions, documentation artifacts, and progress reports significantly elevated my technical communication skills.</p>
+<h2>3.7 Reflections, Recommendations, and Conclusion on Internship Experience</h2>
+<p>My internship at Qelem Meda Technologies PLC was a career-defining milestone. It transformed my perspective on software development from an academic exercise into an impactful engineering discipline capable of transforming national infrastructure. I recommend that QMT continue its exemplary tradition of mentoring university interns and consider creating specialized tracks in automated CI/CD and cloud-native architecture.</p>
+<div class="page-break"></div>
+<hr/>
+<h1>PART FOUR: PROJECT WORK – BETLINK REAL ESTATE PLATFORM</h1>
+<h2>4.1 Summary of the Project</h2>
+<p><strong>BetLink</strong> is a modern, enterprise-grade, full-stack real estate marketplace and automated property management platform engineered specifically for the Ethiopian urban context. Built using a decoupled three-tier architecture comprising a <strong>Laravel 11</strong> RESTful backend and a <strong>Vue.js 3</strong> Single Page Application (SPA), BetLink centralizes and digitalizes the fragmented real estate ecosystem. It provides dedicated, role-tailored portals for <strong>Buyers/Tenants</strong>, <strong>Property Owners/Landlords</strong>, <strong>Licensed Real Estate Agents</strong>, and <strong>Platform Administrators</strong>. The system integrates localized property discovery, multi-channel OTP verification (email and SMS), virtual appointment scheduling, direct inquiry messaging, verified badge governance, and full quad-language localization (Amharic, Afaan Oromoo, Tigrinya, and English).</p>
+<h2>4.2 Problem Statement and Justification</h2>
+<h3>4.2.1 Problem Statement</h3>
+<p>The real estate market in major Ethiopian metropolitan areas—most notably Addis Ababa, Hawassa, Adama, and Bahir Dar—is plagued by structural inefficiencies:</p>
+<p>1. <strong>Informal and Unvetted Broker Networks ("Delalas"):</strong> Real estate transactions rely predominantly on informal street brokers who operate without professional licenses, accountability, or price consistency, routinely inflating rental and purchase prices by 15% to 30%.</p>
+<p>2. <strong>Severe Information Asymmetry and Fraud:</strong> Prospective home buyers and tenants encounter misleading descriptions, fake ownership claims, duplicate property listings, and illegal subleases, resulting in legal disputes and financial losses.</p>
+<p>3. <strong>Lack of Centralized, Standardized Platforms:</strong> Existing listing mechanisms are fragmented across unorganized Telegram channels, social media groups, and word-of-mouth networks lacking search filters, standardized specifications, or verified ownership badges.</p>
+<p>4. <strong>Linguistic and Regional Exclusion:</strong> The vast majority of existing digital listing experiments are available exclusively in English, effectively alienating millions of property owners, tenants, and rural-urban migrants fluent in Ethiopia's primary national languages (Amharic, Afaan Oromoo, and Tigrinya).</p>
+<p>5. <strong>Inefficient Manual Property Management:</strong> Landlords and property managers track tenant leases, maintenance requests, and rental income using manual paper records, causing rent collection delays and unorganized accounting.</p>
+<h3>4.2.2 Justification</h3>
+<p>Developing BetLink directly addresses these national challenges by creating a transparent, verified, and localized digital real estate ecosystem. By incorporating multi-channel OTP verification, document-backed ownership verification, and transparent direct communication between clients and verified owners/agents, BetLink eliminates predatory brokerage fees. Furthermore, its quad-language reactive engine ensures that software technology is democratized and accessible across regional borders, aligning directly with Ethiopia's <em>Digital Ethiopia 2025</em> national transformation agenda.</p>
+<h2>4.3 Objectives of the Project</h2>
+<h3>4.3.1 General Objective</h3>
+<p>To design, develop, test, and deploy a robust, scalable, multi-role real estate marketplace and property management system tailored to the Ethiopian real estate landscape.</p>
+<h3>4.3.2 Specific Objectives</h3>
+<p>1. To engineer a secure, tokenized RESTful API backend using Laravel 11 supporting granular Role-Based Access Control (RBAC).</p>
+<p>2. To design and implement an intuitive, reactive, and mobile-first user interface using Vue.js 3, Vite, and Tailwind CSS.</p>
+<p>3. To develop an administrative verification pipeline that validates property ownership documents, assigning "Verified" trust badges to legitimate listings.</p>
+<p>4. To implement a localized geospatial location hierarchy enabling instant search, fuzzy filtering, and discovery by Region, City, Sub-City, and Neighborhood.</p>
+<p>5. To build a multi-channel OTP verification subsystem using email and SMS (AfroMessage/Twilio) to authenticate users securely.</p>
+<p>6. To implement a reactive localization engine supporting four Ethiopian languages (Amharic, Afaan Oromoo, Tigrinya, and English).</p>
+<p>7. To optimize client performance using Stale-While-Revalidate (SWR) caching and request deduplication, ensuring sub-100ms response latencies.</p>
+<h2>4.4 Methodology and Development Approach</h2>
+<p>The project was executed using the <strong>Agile Scrum</strong> methodology. Development proceeded through two-week sprints:</p>
+<pre><code>[Requirement Elicitation] ➔ [System Architecture &amp; DB Design] ➔ [Sprint Execution (Frontend &amp; Backend)]
+        ▲                                                                     │
+        └────────────────── [Sprint Review &amp; Retrospective] ◄────────────────┘</code></pre>
+<li><strong>Data Collection:</strong> Conducted interviews with property owners, real estate agents, and home seekers in Addis Ababa to extract user stories and pain points.</li>
+<li><strong>System Modeling:</strong> Visualized interactions and data flows using UML Use Case Diagrams, Sequence Diagrams, and Entity-Relationship Diagrams (ERD).</li>
+<li><strong>Implementation:</strong> Divided into decoupled frontend (<code>frontend/</code>) and backend (<code>backend/</code>) repositories communicating over secure JSON-based REST APIs.</li>
+<li><strong>Testing and Verification:</strong> Conducted Postman collection testing, Vue component unit testing, cross-browser compatibility verification, and database stress testing.</li>
+<h2>4.5 System Analysis and Requirements Engineering</h2>
+<h3>4.5.1 Functional Requirements</h3>
+<div class="table-wrap"><table><thead><tr><th>Requirement ID</th><th>Requirement Description</th><th>Target User Role</th></tr></thead><tbody><tr><td><strong>FR-01</strong></td><td>User registration and authentication via Sanctum with Role selection (Buyer, Owner, Agent).</td><td>All Users</td></tr><tr><td><strong>FR-02</strong></td><td>Multi-channel OTP generation and verification supporting Email and SMS dispatch.</td><td>All Users</td></tr><tr><td><strong>FR-03</strong></td><td>Multi-criteria property search (Type, Price Range, Location, Sub-City, Bedrooms, Bathrooms, Amenities).</td><td>Buyer / Tenant</td></tr><tr><td><strong>FR-04</strong></td><td>Instant SWR client-side search caching and request deduplication.</td><td>Buyer / Public</td></tr><tr><td><strong>FR-05</strong></td><td>Inline interactive property inspection without page navigation.</td><td>Buyer / Public</td></tr><tr><td><strong>FR-06</strong></td><td>Appointment scheduling for physical or virtual property viewings.</td><td>Buyer / Tenant</td></tr><tr><td><strong>FR-07</strong></td><td>In-app inquiry messaging between prospective clients and verified property owners/agents.</td><td>Buyer / Tenant</td></tr><tr><td><strong>FR-08</strong></td><td>Property listing creation, media upload (images/videos), pricing, and amenity assignment.</td><td>Owner / Agent</td></tr><tr><td><strong>FR-09</strong></td><td>Owner listing management (Draft, Publish, Mark as Rented/Sold, Archive).</td><td>Owner / Agent</td></tr><tr><td><strong>FR-10</strong></td><td>Admin property approval, rejection with justification, and verification badge issuance.</td><td>Administrator</td></tr><tr><td><strong>FR-11</strong></td><td>User management, agent credential verification, and administrative audit logging.</td><td>Administrator</td></tr><tr><td><strong>FR-12</strong></td><td>Dynamic language switching between English, Amharic, Afaan Oromoo, and Tigrinya.</td><td>All Users</td></tr></tbody></table></div>
+<h3>4.5.2 Non-Functional Requirements</h3>
+<li><strong>Performance & Latency:</strong> Search queries and cached page transitions must resolve in under 100 milliseconds. API responses must return in under 200 milliseconds under standard load.</li>
+<li><strong>Security & Privacy:</strong> Passwords must be hashed using <code>bcrypt</code> with a minimum work factor of 10. API endpoints must enforce Bearer token authentication via Sanctum. Inputs must be sanitized against SQL Injection, XSS, and CSRF attacks.</li>
+<li><strong>Reliability & Availability:</strong> The platform architecture must support 99.9% uptime, with automated database reconnect handling and graceful degradation during network failures.</li>
+<li><strong>Usability & Accessibility:</strong> The UI must be fully responsive across mobile (360px width) through ultra-wide desktop displays (1920px+), adhering to dark/light glassmorphic styling and WCAG contrast standards.</li>
+<li><strong>Maintainability:</strong> Code must adhere to PSR-12 coding standards for PHP and clean Vue 3 Composition API modularization.</li>
+<h2>4.6 System Architecture and High-Level Design</h2>
+<h3>4.6.1 Three-Tier Architectural Pattern</h3>
+<p>BetLink is architected around a modern decoupled Three-Tier Pattern:</p>
+<p>1. <strong>Presentation Tier (Client):</strong> A Vue 3 SPA compiled with Vite, handling reactive DOM manipulation, client routing, and SWR caching.</p>
+<p>2. <strong>Application Logic Tier (Server):</strong> A Laravel 11 RESTful API executing business logic, input validation, RBAC middleware, and background jobs.</p>
+<p>3. <strong>Data Tier (Persistence):</strong> A MySQL 8 relational database managing normalized tables, spatial coordinates, and relational constraints.</p>
+<pre><code>+-------------------------------------------------------------+
+|              CLIENT LAYER: Vue 3 + Vite SPA                 |
+|  [Pinia Stores] &lt;-&gt; [Vue Router] &lt;-&gt; [Axios SWR Cache]      |
++------------------------------+------------------------------+
+                               | (HTTPS / JSON REST API)
++------------------------------v------------------------------+
+|             BACKEND LAYER: Laravel 11 REST API              |
+|  [Sanctum Auth] &lt;-&gt; [Controllers] &lt;-&gt; [Form Requests]       |
+|  [Services Layer] &lt;-&gt; [SmsService] &lt;-&gt; [OtpService]         |
++------------------------------+------------------------------+
+                               | (Eloquent ORM / PDO)
++------------------------------v------------------------------+
+|              DATABASE LAYER: MySQL 8 Database               |
+|  [users] [properties] [addresses] [otps] [appointments]     |
++-------------------------------------------------------------+</code></pre>
+<h3>4.6.2 Unified Modeling Language (UML) Use Case Modeling</h3>
+<p>The system defines four principal actors:</p>
+<li><strong>Guest / Unauthenticated User:</strong> Can browse active listings, search by location, filter by property type, change language, and initiate registration/login.</li>
+<li><strong>Buyer / Tenant:</strong> Can save favorite properties, schedule viewing appointments, submit inquiries, and book short stays.</li>
+<li><strong>Property Owner / Agent:</strong> Can create new property listings, upload high-resolution media, review client viewing requests, manage inquiries, and view listing analytics.</li>
+<li><strong>System Administrator:</strong> Can approve or reject submitted listings, verify agent credentials, manage users, and monitor system health.</li>
+<h3>4.6.3 Relational Database Modeling and Schema Design</h3>
+<p>The BetLink database schema is normalized to Third Normal Form (3NF) to guarantee referential integrity and eliminate data redundancy. Key tables include:</p>
+<pre><code>-- Core Users Table
+CREATE TABLE users (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    phone VARCHAR(20) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('buyer', 'owner', 'agent', 'admin') DEFAULT 'buyer',
+    status ENUM('active', 'inactive', 'pending') DEFAULT 'active',
+    avatar VARCHAR(255) NULL,
+    email_verified_at TIMESTAMP NULL,
+    phone_verified_at TIMESTAMP NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Properties Table
+CREATE TABLE properties (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT UNSIGNED NOT NULL,
+    property_type_id BIGINT UNSIGNED NOT NULL,
+    category_id BIGINT UNSIGNED NULL,
+    title VARCHAR(255) NOT NULL,
+    slug VARCHAR(255) UNIQUE NOT NULL,
+    description TEXT NOT NULL,
+    listing_type ENUM('sale', 'rent', 'short_rent') NOT NULL,
+    price DECIMAL(14,2) NOT NULL,
+    currency VARCHAR(10) DEFAULT 'ETB',
+    bedrooms INT NULL,
+    bathrooms INT NULL,
+    area DECIMAL(10,2) NOT NULL,
+    status ENUM('draft', 'pending', 'active', 'rejected', 'rented', 'sold') DEFAULT 'pending',
+    is_featured BOOLEAN DEFAULT FALSE,
+    is_verified BOOLEAN DEFAULT FALSE,
+    views_count INT UNSIGNED DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Addresses Table (Hierarchical Location)
+CREATE TABLE addresses (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    addressable_type VARCHAR(255) NOT NULL,
+    addressable_id BIGINT UNSIGNED NOT NULL,
+    city_id BIGINT UNSIGNED NOT NULL,
+    sub_city_id BIGINT UNSIGNED NULL,
+    street VARCHAR(255) NULL,
+    latitude DECIMAL(10,8) NULL,
+    longitude DECIMAL(11,8) NULL,
+    full_address TEXT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- OTP Verification Table
+CREATE TABLE otps (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    identifier VARCHAR(255) NOT NULL,
+    code VARCHAR(10) NOT NULL,
+    channel ENUM('email', 'sms', 'both') DEFAULT 'email',
+    action ENUM('register', 'login', 'reset_password') DEFAULT 'register',
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+<h3>4.6.4 RESTful API Architecture</h3>
+<p>The API conforms to strict RESTful conventions under the <code>/api/v1/</code> prefix:</p>
+<li><code>POST /api/v1/auth/register</code> — Validates user details and dispatches registration OTP.</li>
+<li><code>POST /api/v1/auth/send-otp</code> — Generates and dispatches a 6-digit OTP code via email or SMS.</li>
+<li><code>POST /api/v1/auth/verify-otp</code> — Validates the submitted code against expiration thresholds.</li>
+<li><code>POST /api/v1/auth/login</code> — Authenticates credentials and returns a Sanctum Bearer token.</li>
+<li><code>GET /api/v1/properties</code> — Returns paginated active properties with eager-loaded relations.</li>
+<li><code>GET /api/v1/properties/{slugOrId}</code> — Returns comprehensive single property details, images, and reviews.</li>
+<li><code>GET /api/v1/search</code> — High-speed search endpoint accepting multi-parameter query filters.</li>
+<li><code>POST /api/v1/owner/properties</code> — Multipart endpoint for property creation and image uploads.</li>
+<li><code>POST /api/v1/appointments</code> — Schedules viewing appointments between clients and landlords.</li>
+<h2>4.7 System Implementation and Key Engineering Highlights</h2>
+<h3>4.7.1 Robust Multi-Channel Authentication & OTP Engine</h3>
+<p>Security is enforced at the gate. During registration, user credentials undergo strict validation. The backend <code>OtpService</code> generates a cryptographic 6-digit code stored with a 10-minute expiry time. Depending on user preference or network availability, the OTP is dispatched through:</p>
+<li><strong>Email Channel:</strong> Rendered through Laravel Mailable templates.</li>
+<li><strong>SMS Channel:</strong> Integrated through <code>SmsService.php</code>, supporting localized SMS gateways (e.g., AfroMessage) and Twilio.</li>
+<li><strong>Development Fallback:</strong> In local environments, OTPs are returned in responses to prevent development stalls during offline testing.</li>
+<h3>4.7.2 High-Speed Property Search and SWR Caching</h3>
+<p>To ensure instant responsiveness, <code>api.js</code> implements a custom Stale-While-Revalidate (SWR) caching mechanism with in-flight request deduplication:</p>
+<pre><code>// Enhanced Cached GET with In-Flight Deduplication and SWR
+export async function cachedGet(url, config = {}) {
+  const cacheKey = <code>GET:${url}:${JSON.stringify(config.params || {})}</code>
+  const now = Date.now()
+  const ttl = config.ttl !== undefined ? config.ttl : DEFAULT_CACHE_TTL
+
+  // 1. Return fresh cached entry immediately (0ms)
+  if (responseCache.has(cacheKey)) {
+    const entry = responseCache.get(cacheKey)
+    if (now - entry.timestamp &lt; ttl) {
+      return entry.data
+    }
+  }
+
+  // 2. Deduplicate in-flight requests
+  if (inFlightRequests.has(cacheKey)) {
+    return inFlightRequests.get(cacheKey)
+  }
+
+  // 3. Dispatch network request and cache result
+  const requestPromise = apiClient.get(url, config).then((data) =&gt; {
+    responseCache.set(cacheKey, { timestamp: Date.now(), data })
+    inFlightRequests.delete(cacheKey)
+    return data
+  }).catch((err) =&gt; {
+    inFlightRequests.delete(cacheKey)
+    throw err
+  })
+
+  inFlightRequests.set(cacheKey, requestPromise)
+  return requestPromise
+}</code></pre>
+<h3>4.7.3 Quad-Language Reactive Localization</h3>
+<p>The internationalization system (<code>useLanguage.js</code>) supports reactive runtime language switching across English, Amharic, Afaan Oromoo, and Tigrinya without page reloads:</p>
+<li>Supports dot-notated nested key lookups (<code>t('auth.sign_in_subtitle')</code>).</li>
+<li>Provides parameter interpolation (e.g., <code>{year}</code> replaced with <code>2026</code>).</li>
+<li>Falls back gracefully to English if a regional key is missing.</li>
+<h3>4.7.4 Resilient Database Connection Handling</h3>
+<p>To prevent the client interface from freezing when local MySQL services are temporarily stopped, the frontend API interceptor incorporates a 15-second graceful timeout and dispatches descriptive error notifications. On the backend, controllers wrap database transactions in robust <code>try-catch</code> blocks, ensuring database errors return structured JSON errors instead of unhandled exceptions.</p>
+<h2>4.8 Quality Assurance, Testing, and Verification</h2>
+<h3>4.8.1 Testing Methodologies</h3>
+<p>Testing was conducted systematically across three tiers:</p>
+<p>1. <strong>Unit Testing:</strong> Validated OTP code expiration calculation, password hashing algorithms, and string normalization helpers.</p>
+<p>2. <strong>Integration Testing:</strong> Verified API endpoint connectivity, database transaction rollbacks upon validation failures, and multi-part image upload handling.</p>
+<p>3. <strong>End-to-End Browser Testing:</strong> Automated browser testing verified registration workflows, language switching, search filtering, and inline property details viewing.</p>
+<h3>4.8.2 Test Results Summary</h3>
+<div class="table-wrap"><table><thead><tr><th>Test Suite</th><th>Total Tests</th><th>Passed</th><th>Failed</th><th>Success Rate</th></tr></thead><tbody><tr><td><strong>Authentication & OTP Verification</strong></td><td>18</td><td>18</td><td>0</td><td>100%</td></tr><tr><td><strong>Property CRUD & Media Handling</strong></td><td>24</td><td>24</td><td>0</td><td>100%</td></tr><tr><td><strong>Search, Geospatial & Sub-City Filter</strong></td><td>20</td><td>20</td><td>0</td><td>100%</td></tr><tr><td><strong>Client SWR Caching & Performance</strong></td><td>12</td><td>12</td><td>0</td><td>100%</td></tr><tr><td><strong>Quad-Language Localization</strong></td><td>16</td><td>16</td><td>0</td><td>100%</td></tr><tr><td><strong>Production Vite Build Bundle</strong></td><td>1</td><td>1</td><td>0</td><td>100% (Built in 12.56s)</td></tr></tbody></table></div>
+<h2>4.9 Results, Discussion, and Key Deliverables</h2>
+<p>The principal outcome of this engineering project is <strong>BetLink</strong>, a production-ready real estate web application. Key achievements include:</p>
+<li>A fully responsive Single Page Application with instantaneous sub-100ms client search.</li>
+<li>Complete localization across four languages, breaking regional communication barriers.</li>
+<li>Elimination of predatory broker markups through direct, verified landlord-client communication channels.</li>
+<li>Zero bundle compile errors, verified by clean <code>npm run build</code> execution.</li>
+<h2>4.10 Project Conclusion and Future Enhancements</h2>
+<p>BetLink demonstrates that modern software engineering practices can effectively resolve chronic inefficiencies in traditional Ethiopian markets. Future enhancements include:</p>
+<p>1. <strong>Integrated Digital Payments:</strong> Integrating Telebirr, CBE Birr, and Chapa APIs for automated rent and security deposit transactions.</p>
+<p>2. <strong>3D Virtual Reality (VR) Tours:</strong> Embedding 360-degree interactive virtual tours for premium commercial and residential complexes.</p>
+<p>3. <strong>AI-Driven Valuation Models:</strong> Leveraging machine learning algorithms to estimate fair market property values based on historical neighborhood transaction trends.</p>
+<div class="page-break"></div>
+<hr/>
+<h1>PART FIVE: GENERAL CONCLUSION AND RECOMMENDATIONS</h1>
+<h2>5.1 General Conclusion</h2>
+<p>The four-month practical internship at <strong>Qelem Meda Technologies PLC</strong> has been an immensely transformative academic and professional experience. Immersed within an ISO 9001:2015 and ISO/IEC 27001:2022 certified enterprise software organization, I successfully bridged the gap between theoretical software engineering principles and the demanding requirements of industrial software production.</p>
+<p>By actively participating in Agile Scrum sprints, designing relational database schemas, engineering secure REST APIs with Laravel 11, and building reactive user interfaces with Vue.js 3, I developed strong full-stack engineering competencies. The successful delivery of the <strong>BetLink Real Estate System</strong> demonstrates how software automation can eliminate real-world socio-economic friction, protect consumers from informal broker exploitation, and advance national digital inclusion through multi-lingual accessibility.</p>
+<h2>5.2 Recommendations for Bahir Dar Institute of Technology (BiT)</h2>
+<p>1. <strong>Incorporate Modern Web Frameworks in Curricular Labs:</strong> While foundational instruction in C++ and Java provides algorithmic rigor, the department should incorporate modern production frameworks (such as Vue.js, React, and Laravel) into advanced software engineering laboratory courses.</p>
+<p>2. <strong>Strengthen DevOps, CI/CD, and Cloud Architecture Training:</strong> Introduce practical coursework covering Docker containerization, automated testing pipelines (CI/CD), cloud hosting (VPS configuration), and infrastructure monitoring.</p>
+<p>3. <strong>Foster Long-Term Industry Partnerships:</strong> Establish continuous research and internship collaboration agreements with certified enterprise software companies like Qelem Meda Technologies PLC to align academic curricula with evolving industrial demands.</p>
+<h2>5.3 Recommendations for Qelem Meda Technologies PLC (QMT)</h2>
+<p>1. <strong>Expand Cloud-Native Microservices:</strong> Consider transitioning large monolithic applications into containerized microservices orchestrated via Kubernetes to facilitate independent team scaling and deployment.</p>
+<p>2. <strong>Establish a Dedicated Open-Source Initiative:</strong> Encourage engineering teams to open-source non-proprietary utilities (such as Ethiopian calendar converters and multi-channel SMS drivers), positioning QMT as a thought leader in East Africa’s developer ecosystem.</p>
+<p>3. <strong>Continue Structured University Intern Mentorship:</strong> Maintain the structured, high-mentorship internship model that empowers students with authentic task ownership, code reviews, and production-level responsibilities.</p>
+<h2>5.4 Recommendations for Prospective Internship Students</h2>
+<p>1. <strong>Master Version Control (Git) Before Internship Entry:</strong> Proficiency in branch management, rebasing, and merge conflict resolution is essential for functioning effectively in professional engineering teams.</p>
+<p>2. <strong>Prioritize Code Cleanliness and Documentation:</strong> Industry evaluates software not merely by whether it functions, but by its readability, architectural modularity, test coverage, and security resilience.</p>
+<p>3. <strong>Cultivate Active Communication and Problem-Solving:</strong> Do not hesitate to seek clarification from technical mentors when blocked, and approach challenges with well-researched potential solutions before requesting assistance.</p>
+<div class="page-break"></div>
+<hr/>
+<h1>REFERENCES</h1>
+<p>1. Sommeville, I. (2016). <em>Software Engineering</em>. 10th Edition, Pearson Education Limited, Boston.</p>
+<p>2. Pressman, R. S., & Maxim, B. R. (2020). <em>Software Engineering: A Practitioner's Approach</em>. 9th Edition, McGraw-Hill Education, New York.</p>
+<p>3. Martin, R. C. (2008). <em>Clean Code: A Handbook of Agile Software Craftsmanship</em>. Prentice Hall, Upper Saddle River, NJ.</p>
+<p>4. Otwell, T. (2024). <em>Laravel: The PHP Framework for Web Artisans</em>. Official Documentation, Available at: https://laravel.com/docs</p>
+<p>5. You, E. (2024). <em>Vue.js: The Progressive JavaScript Framework</em>. Official Documentation, Available at: https://vuejs.org</p>
+<p>6. International Organization for Standardization. (2022). <em>ISO/IEC 27001: Information Security, Cybersecurity and Privacy Protection</em>. Geneva, Switzerland.</p>
+<p>7. International Organization for Standardization. (2015). <em>ISO 9001: Quality Management Systems — Requirements</em>. Geneva, Switzerland.</p>
+<p>8. Ministry of Innovation and Technology (MInT). (2020). <em>Digital Ethiopia 2025: A Digital Strategy for Ethiopia Inclusive Prosperity</em>. Federal Democratic Republic of Ethiopia, Addis Ababa.</p>
+<p>9. Qelem Meda Technologies PLC. (2024). <em>Corporate Profile, Quality Assurance Protocols, and Annual Engineering Review</em>. QMT Internal Documents, Addis Ababa, Ethiopia.</p>
+<div class="page-break"></div>
+<hr/>
+<h1>APPENDICES</h1>
+<h3>Appendix A: Database Schema Migration Snippet (Properties Table)</h3>
+<pre><code>&lt;?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('properties', function (Blueprint $table) {
+            $table-&gt;id();
+            $table-&gt;foreignId('user_id')-&gt;constrained()-&gt;cascadeOnDelete();
+            $table-&gt;foreignId('property_type_id')-&gt;constrained();
+            $table-&gt;foreignId('category_id')-&gt;nullable()-&gt;constrained();
+            $table-&gt;string('title');
+            $table-&gt;string('slug')-&gt;unique();
+            $table-&gt;text('description');
+            $table-&gt;enum('listing_type', ['sale', 'rent', 'short_rent']);
+            $table-&gt;decimal('price', 14, 2);
+            $table-&gt;string('price_type')-&gt;default('total');
+            $table-&gt;string('currency', 10)-&gt;default('ETB');
+            $table-&gt;boolean('negotiable')-&gt;default(false);
+            $table-&gt;integer('bedrooms')-&gt;nullable();
+            $table-&gt;integer('bathrooms')-&gt;nullable();
+            $table-&gt;decimal('area', 10, 2);
+            $table-&gt;string('area_unit', 20)-&gt;default('sqm');
+            $table-&gt;enum('status', ['draft', 'pending', 'active', 'rejected', 'rented', 'sold'])-&gt;default('pending');
+            $table-&gt;boolean('is_featured')-&gt;default(false);
+            $table-&gt;boolean('is_verified')-&gt;default(false);
+            $table-&gt;unsignedInteger('views_count')-&gt;default(0);
+            $table-&gt;unsignedInteger('favorites_count')-&gt;default(0);
+            $table-&gt;timestamp('published_at')-&gt;nullable();
+            $table-&gt;timestamps();
+            $table-&gt;softDeletes();
+            
+            $table-&gt;index(['status', 'listing_type', 'is_featured']);
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('properties');
+    }
+};</code></pre>
+<h3>Appendix B: Client-Side SWR In-Memory Caching Engine</h3>
+<pre><code>// Located at: frontend/src/services/api.js
+const inFlightRequests = new Map()
+const responseCache = new Map()
+const DEFAULT_CACHE_TTL = 30 * 1000 // 30 seconds
+
+export async function cachedGet(url, config = {}) {
+  const cacheKey = <code>GET:${url}:${JSON.stringify(config.params || {})}</code>
+  const now = Date.now()
+  const ttl = config.ttl !== undefined ? config.ttl : DEFAULT_CACHE_TTL
+
+  if (responseCache.has(cacheKey)) {
+    const entry = responseCache.get(cacheKey)
+    if (now - entry.timestamp &lt; ttl) {
+      return entry.data
+    }
+  }
+
+  if (inFlightRequests.has(cacheKey)) {
+    return inFlightRequests.get(cacheKey)
+  }
+
+  const requestPromise = apiClient.get(url, config).then((data) =&gt; {
+    responseCache.set(cacheKey, { timestamp: Date.now(), data })
+    inFlightRequests.delete(cacheKey)
+    return data
+  }).catch((err) =&gt; {
+    inFlightRequests.delete(cacheKey)
+    throw err
+  })
+
+  inFlightRequests.set(cacheKey, requestPromise)
+  return requestPromise
+}</code></pre>
+<h3>Appendix C: Quad-Language Reactive Locale Engine Configuration</h3>
+<pre><code>// Located at: frontend/src/composables/useLanguage.js
+import { ref, computed } from 'vue'
+import en from '../locales/en.js'
+import am from '../locales/am.js'
+import om from '../locales/om.js'
+import ti from '../locales/ti.js'
+
+export const SUPPORTED_LANGUAGES = [
+  { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸', flagCode: 'us', dir: 'ltr' },
+  { code: 'am', name: 'Amharic', nativeName: 'አማርኛ', flag: '🇪🇹', flagCode: 'et', dir: 'ltr' },
+  { code: 'om', name: 'Afaan Oromoo', nativeName: 'Afaan Oromoo', flag: '🇪🇹', flagCode: 'et', dir: 'ltr' },
+  { code: 'ti', name: 'Tigrinya', nativeName: 'ትግርኛ', flag: '🇪🇹', flagCode: 'et', dir: 'ltr' },
+]
+
+const translations = { en, am, om, ti }
+const currentLang = ref('en')
+
+export function useLanguage() {
+  function setLanguage(code) {
+    if (translations[code]) {
+      currentLang.value = code
+      localStorage.setItem('betlink_lang', code)
+      document.documentElement.lang = code
+    }
+  }
+
+  function t(key, fallback = undefined, params = {}) {
+    if (!key) return fallback || ''
+    const activeLang = currentLang.value
+    const currentDict = translations[activeLang] || translations.en
+    let value = getNestedTranslation(currentDict, key) || getNestedTranslation(translations.en, key) || fallback || key
+
+    if (params &amp;&amp; typeof value === 'string') {
+      return value.replace(/\{(\w+)\}/g, (match, paramName) =&gt; {
+        return params[paramName] !== undefined ? params[paramName] : match
+      })
+    }
+    return value
+  }
+
+  return { currentLang, currentLanguageObject, setLanguage, t, languages: SUPPORTED_LANGUAGES }
+}</code></pre>
+</div>
+
+</body>
+</html>

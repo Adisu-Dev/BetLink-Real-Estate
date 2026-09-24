@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+vendor/
+frontend/node_modules/
+backend/vendor/
+
+# Environment files
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+backend/.env
+backend/.env.*
+
+# Build outputs
+frontend/dist/
+dist/
+
+# Editor & System
+.vscode/
+.idea/
+.gemini/
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+
+# Scratch & Word temporary files
+scratch/
+*.docx
+*.pdf
+!documentation/*.pdf
+
+# Storage & Logs
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/storage/logs/*
+backend/storage/framework/cache/data/*
+!backend/storage/framework/cache/.gitignore
+!backend/storage/framework/sessions/.gitignore
+!backend/storage/framework/views/.gitignore
+!backend/storage/logs/.gitignore

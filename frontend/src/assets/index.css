@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply font-sans text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-950 antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-900 dark:text-white font-bold;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  /* ─── Buttons ─── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-slate-900 hover:bg-slate-800 dark:bg-emerald-600 dark:hover:bg-emerald-700
+           text-white font-semibold rounded-xl
+           px-6 py-3 text-sm
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700
+           text-slate-900 dark:text-white font-semibold rounded-xl
+           border border-slate-300 dark:border-slate-700 hover:border-slate-400
+           px-6 py-3 text-sm
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800
+           text-slate-700 dark:text-slate-200 font-semibold rounded-xl
+           border border-slate-200 dark:border-slate-700
+           px-6 py-3 text-sm
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+  }
+
+  /* ─── Cards ─── */
+  .card {
+    @apply bg-white dark:bg-slate-900 rounded-2xl shadow-card border border-slate-100 dark:border-slate-800
+           text-slate-900 dark:text-slate-100
+           transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  /* ─── Section headings ─── */
+  .section-label {
+    @apply text-slate-500 dark:text-slate-400 font-semibold text-sm tracking-wider uppercase;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-slate-900 dark:text-white leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-slate-600 dark:text-slate-300 text-base md:text-lg leading-relaxed;
+  }
+
+  /* ─── Container ─── */
+  .container-xl {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ─── Badge ─── */
+  .badge-featured {
+    @apply bg-yellow-400 text-black text-xs font-bold px-2.5 py-1 rounded-full;
+  }
+
+  .badge-verified {
+    @apply bg-emerald-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1;
+  }
+
+  .badge-listing {
+    @apply bg-slate-900 dark:bg-slate-700 text-white text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+
+  /* ─── Input ─── */
+  .form-input {
+    @apply w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800
+           px-4 py-3 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+           transition duration-150;
+  }
+
+  .form-select {
+    @apply w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800
+           px-4 py-3 text-sm text-slate-900 dark:text-slate-100
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+           transition duration-150 appearance-none cursor-pointer;
+  }
+
+  /* ─── Nav link ─── */
+  .nav-link {
+    @apply text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium text-sm
+           transition-colors duration-150 relative
+           after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5
+           after:bg-emerald-600 after:transition-all after:duration-200
+           hover:after:w-full;
+  }
+
+  .nav-link-active {
+    @apply text-emerald-600 dark:text-emerald-400 font-semibold
+           after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-0.5
+           after:bg-emerald-600;
+  }
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+.dark ::-webkit-scrollbar-thumb { background: #334155; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* ─── Horizontal scroll snap for mobile carousels ─── */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-snap-x > * {
+  scroll-snap-align: start;
+}
+
+/* ─── Prevent overflow ─── */
+.overflow-guard {
+  overflow-x: hidden;
+  width: 100%;
+}
