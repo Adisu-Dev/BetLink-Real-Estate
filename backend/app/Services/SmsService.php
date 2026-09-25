@@ -85,7 +85,17 @@ class SmsService
 
         Log::info("AfroMessage response [Status: {$response->status()}]: " . $response->body());
 
-        return $response->successful();
+        if (!$response->successful()) {
+            return false;
+        }
+
+        $body = $response->json();
+        if (isset($body['acknowledge']) && $body['acknowledge'] === 'error') {
+            Log::warning("AfroMessage error: " . json_encode($body['response']['errors'] ?? $body['response']));
+            return false;
+        }
+
+        return true;
     }
 
     /**

@@ -12,7 +12,7 @@ const apiClient = axios.create({
   headers: {
     'Accept': 'application/json',
   },
-  timeout: 15000, // 15s to allow sufficient time for local database queries without timeout
+  timeout: 30000, // 30s to allow sufficient headroom for database and network queries
 })
 
 // Request Interceptor: Attach Bearer Token & Handle Content-Type
